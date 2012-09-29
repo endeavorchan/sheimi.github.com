@@ -39,9 +39,12 @@ $(document).ready(function() {
     }
   }
   $(window).scroll(set_header)
+  win_width = $(window).width()
+  offset = win_width > 767 ? 30 : -Infinity 
+  console.log(offset)
   $('.header').affix({
     offset: {
-      top: 30
+      top: offset
     }
   })
 });
