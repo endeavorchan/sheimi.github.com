@@ -8,7 +8,7 @@ h1(title). {{page.title}}
 
 h2. 教育背景
 
-* 2009/09 -  "南京大学":http://www.nju.edu.cn "软件学院":http://www.nju.edu.cn, 大三，本科生，GPA：4.49, 1/250(大概)
+* 2009/09 -  "南京大学":http://www.nju.edu.cn "软件学院":http://www.nju.edu.cn, 大三，本科生，GPA：4.49, 3 / 185
 
 h2. 专业技能
 
