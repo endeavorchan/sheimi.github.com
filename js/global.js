@@ -41,7 +41,6 @@ $(document).ready(function() {
   $(window).scroll(set_header)
   win_width = $(window).width()
   offset = win_width > 767 ? 30 : -Infinity 
-  console.log(offset)
   $('.header').affix({
     offset: {
       top: offset
@@ -153,7 +152,7 @@ if (typeof history.pushState !== 'undefined') {
 
     load_page(href, function() {
       history.pushState({
-        path: href
+        path: href.split('#')[0]
         , type: 'main'
       }, null, href)
     })
@@ -170,6 +169,11 @@ if (typeof history.pushState !== 'undefined') {
       first = !first
       return
     }
+    if (state !== null 
+        && state.path === '/archives/tags.html'
+        && location.pathname === '/archives/tags.html') {
+      return
+    }
     var path = location.pathname
     load_page(path)
   })
@@ -177,8 +181,13 @@ if (typeof history.pushState !== 'undefined') {
   $(window).on('popstate', function(e) {
     e = e.originalEvent
     var state = e.state
-    if (state === null || state.type !== 'tags')
+    if (state === null)
       return
+    if (state.type !== 'tags') {
+      if (!(state.path === '/archives/tags.html'
+          && location.pathname === '/archives/tags.html'))
+        return
+    }
     if ($('.tag-cloud').length === 0) {
       load_page(state.path)
     } else {
