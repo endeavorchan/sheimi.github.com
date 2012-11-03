@@ -2,13 +2,13 @@
 layout: default
 title: Sheimi's Hive 
 homework:
-  - ['21 Oct 2012', 'tiny-lex', 'Compiler Lab: A Tiny Lexical Parser']
+  - ['21 Oct 2012', 'tiny-lex', 'Compiler Lab: A Tiny Lexical Parser', 'page']
   - ['09 Apr 2012', 'chat-everywhere', 'Web Bonus: Chat-Everywhere']
   - ['12 May 2012', 'online-shop', 'Web Homework: Online-Shop']
   - ['05 May 2012', 'IPC-Homework', 'Linux Homework: IPC-Homework']
   - ['26 Feb 2012', 'ac-demo', 'MIS Homework: Demo of Access Control']
   - ['21 Feb 2012', 'Dessert-House', 'MIS Homework: Dessert House']
-  - ['18 Feb 2012', 'tiny-find', 'Linux Homework: Tiny-Find']
+  - ['18 Feb 2012', 'tiny-find', 'Linux Homework: Tiny-Find', 'page']
   - ['06 Jul 2011', 'Swing-TextEditor', 'Software Construction Homework: Swing-TextEditor']
   - ['10 Jun 2011', 'oedu', 'SE Homework: Oedu']
 projects:
@@ -47,7 +47,17 @@ projects:
   {% for hw in page.homework%}
   <li class="row">
     <span class="span2">{{hw[0]}} &raquo;</span>
-    <span class="span4 offset1"><a href="https://github.com/sheimi/{{ hw[1] }}">{{ hw[2] }}</a></span>
+    <span class="span4 offset1">
+      {% if hw[3] == 'page' %}
+      <a href="http://blog.sheimi.me/{{ hw[1] }}" target="_blank">
+        {{ hw[2] }}
+      </a>
+      {% else %}
+      <a href="https://github.com/sheimi/{{ hw[1] }}" target="_blank">
+        {{ hw[2] }}
+      </a>
+      {% endif %}
+    </span>
   </li>
   {% endfor %}
 </ul>
@@ -57,7 +67,11 @@ projects:
   {% for pj in page.projects%}
   <li class="row">
     <span class="span2">{{pj[0]}} &raquo;</span>
-    <span class="span4 offset1"><a href="https://github.com/sheimi/{{ pj[1] }}">{{ pj[2] }}</a></span>
+    <span class="span4 offset1">
+      <a href="https://github.com/sheimi/{{ pj[1] }}" target="_blank">
+        {{ pj[2] }}
+    </a>
+    </span>
   </li>
   {% endfor %}
 </ul>
