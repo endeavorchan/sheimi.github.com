@@ -1,3 +1,9 @@
+// for tooltip ( boot strap)
+$(document).ready(function() {
+  $(".bs-tooltip").tooltip();
+});
+
+
 //for footer
 /*
  * * author @lepture from june
