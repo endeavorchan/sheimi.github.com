@@ -1,6 +1,8 @@
 // for tooltip ( boot strap)
 $(document).ready(function() {
-  $(".bs-tooltip").tooltip();
+  $(".bs-tooltip").tooltip({
+    placement: 'bottom'
+  });
 });
 
 
