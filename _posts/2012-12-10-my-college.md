@@ -5,7 +5,6 @@ category: blog
 meta:
   location: NJU
 tags: [school_life]
-published: false
 ---
 
 不知不觉，大学就已经快要结束了，所有的课都上完了，就剩下毕业设计了。这篇文章本来准备上个月最后一门考试考完了就写的，没想到得了水痘，就搞忘了。
